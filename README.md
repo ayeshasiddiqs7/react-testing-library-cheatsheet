@@ -169,4 +169,4 @@ fireEvent.change(passwordField, { target: { value: "Test@123" } });
 fireEvent.keyPress(passwordField, { key: "Enter", code: 13, charCode: 13 });
 ```
 
-The examples provided offer a glimpse into a few methods. For a more comprehensive understanding of the library, please explore the following official link, which provides additional details: [react-testing-library/cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+The examples provided offer a glimpse into a few methods. For a deeper dive into the library, please explore the following official link, which provides additional details: [react-testing-library/cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
