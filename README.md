@@ -4,15 +4,15 @@ Following are examples of a few methods supported by [React Testing Library(RTL)
 
 ## Table of Contents
 
-- [Fetch elements by](fetch-elements-by)
-   1. [aria-label](aria-label)
-   2. [input placeholder](input-placeholder)
-   3. [role](role)
-   4. [id](id)
-   5. [class name](class-name)
-- [Fire click event on an element](fire-click-event-on-an-element)
-- [Fire change event on an input field](fire-change-event-on-an-input-field)
-- [Fire key press event](fire-key-press-event)
+- [Fetch elements by](#fetch-elements-by)
+   - [aria-label](#aria-label)
+   - [input placeholder](#input-placeholder)
+   - [role](#role)
+   - [id](#id)
+   - [class name](#class-name)
+- [Fire click event on an element](#fire-click-event-on-an-element)
+- [Fire change event on an input field](#fire-change-event-on-an-input-field)
+- [Fire key press event](#fire-key-press-event)
 
 ## Fetch elements by
 
@@ -169,4 +169,4 @@ fireEvent.change(passwordField, { target: { value: "Test@123" } });
 fireEvent.keyPress(passwordField, { key: "Enter", code: 13, charCode: 13 });
 ```
 
-The examples provided offer a glimpse into a few methods. For a deeper dive into the library, please explore the following official link, which provides additional details: [react-testing-library/cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
+The examples provided offer a glimpse into a few methods. For a more comprehensive understanding of the library, please explore the following official link, which provides additional details: [react-testing-library/cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
