@@ -8,6 +8,7 @@ Following are few examples of methods supported by [React Testing Library(RTL)](
    - [aria-label](#aria-label)
    - [input placeholder](#input-placeholder)
    - [role](#role)
+   - [test id](#test-id)
    - [id](#id)
    - [class name](#class-name)
 - [Fire click event on an element](#fire-click-event-on-an-element)
@@ -71,6 +72,26 @@ const wrapper = render(
     />);
 
 const spinnerDisplay = wrapper.getByRole("status");
+```
+NOTE: Recommended to use valid roles with non-abstart ARIA role.
+
+### test id
+
+Source code
+
+```html
+<button data-testId="buttonTest">Click Me!</button>
+```
+
+Test code
+
+```html
+const wrapper = render(
+    <DOMElement
+    data={{id: "123"}}
+    />);
+
+const buttonElement = wrapper.getByTestId("buttonTest");
 ```
 
 ### id
