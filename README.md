@@ -1,5 +1,3 @@
-# React Testing Library Cheatsheet
-
 Following are few examples of methods supported by [React Testing Library(RTL)](https://testing-library.com/docs/react-testing-library/intro/) for easy access.
 
 ## Table of Contents
