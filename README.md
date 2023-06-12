@@ -11,6 +11,7 @@ Following are few examples of methods supported by [React Testing Library(RTL)](
    - [test id](#test-id)
    - [id](#id)
    - [class name](#class-name)
+   - [text](#text)
 - [Fire click event on an element](#fire-click-event-on-an-element)
 - [Fire change event on an input field](#fire-change-event-on-an-input-field)
 - [Fire key press event](#fire-key-press-event)
@@ -134,6 +135,27 @@ const { container } = render(
 expect(container.getElementsByClassName("text-info").length).toBe(3);
 ```
 
+### text
+
+Source code
+
+```html
+<button>Connect with us</button>
+```
+
+Test code
+
+```html
+const wrapper = render(
+    <DOMElement
+    data={{id: "123"}}
+    />);
+
+const elementFull = wrapper.getByText("Connect with us");
+const elementIgnoreCase = wrapper.getByText("connect with us", {exact: false});
+const elementSubstring = wrapper.getByText("with us", {exact: false});
+```
+
 ## Fire click event on an element
 
 ```html
@@ -188,6 +210,7 @@ const passwordField = wrapper.getByPlaceholderText("Enter password");
 fireEvent.change(passwordField, { target: { value: "Test@123" } });
 <!-- Fire key press event of "Enter" key -->
 fireEvent.keyPress(passwordField, { key: "Enter", code: 13, charCode: 13 });
+<!-- Similar with keyUp, keyDown -->
 ```
 
 The examples provided offer a glimpse into a few methods. For a deeper dive into the library, please explore the following official link, which provides additional details: [react-testing-library/cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
