@@ -154,6 +154,13 @@ const elementIgnoreCase = wrapper.getByText("connect with us", {exact: false});
 const elementSubstring = wrapper.getByText("with us", {exact: false});
 ```
 
+Assertion
+
+```html
+expect(wrapper.container.textContent).toMatch("Hello World");
+```
+
+
 ## Fire click event on an element
 
 ```html
