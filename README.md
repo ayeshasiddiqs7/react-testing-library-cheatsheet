@@ -72,7 +72,7 @@ const wrapper = render(
 
 const spinnerDisplay = wrapper.getByRole("status");
 ```
-NOTE: Recommended to use valid roles with non-abstart ARIA role.
+NOTE: It is recommended to use valid roles with non-abstract ARIA role.
 
 ### test id
 
@@ -92,6 +92,7 @@ const wrapper = render(
 
 const buttonElement = wrapper.getByTestId("buttonTest");
 ```
+NOTE: It is recommended to avoid relying too heavily on implementation details like specific `data-testid` attributes. Instead, it's best to utilize available attributes and search methods that reflect how users interact with the application.
 
 ### id
 
@@ -109,7 +110,7 @@ const wrapper = render(
     data={{id: "123"}}
     />);
 
-const buttonElement = header.container.querySelector("#clickButton");
+const buttonElement = wrapper.container.querySelector("#clickButton");
 ```
 
 ### class name
