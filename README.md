@@ -13,6 +13,7 @@ Following are few examples of methods supported by [React Testing Library(RTL)](
 - [Fire click event on an element](#fire-click-event-on-an-element)
 - [Fire change event on an input field](#fire-change-event-on-an-input-field)
 - [Fire key press event](#fire-key-press-event)
+- [Wait for expecation to pass](#wait-for-expecation-to-pass)
 
 ## Fetch elements by
 
@@ -218,5 +219,12 @@ fireEvent.change(passwordField, { target: { value: "Test@123" } });
 fireEvent.keyPress(passwordField, { key: "Enter", code: 13, charCode: 13 });
 <!-- Similar with keyUp, keyDown -->
 ```
+
+## Wait for expectation to pass
+
+```html
+await waitFor(() => expect(wrapper.container.textContent).toMatch("Click Me"));
+```
+The default timeout is 1000ms.
 
 The examples provided offer a glimpse into a few methods. For a deeper dive into the library, please explore the following official link, which provides additional details: [react-testing-library/cheatsheet](https://testing-library.com/docs/react-testing-library/cheatsheet/)
