@@ -13,7 +13,7 @@ Following are few examples of methods supported by [React Testing Library(RTL)](
 - [Fire click event on an element](#fire-click-event-on-an-element)
 - [Fire change event on an input field](#fire-change-event-on-an-input-field)
 - [Fire key press event](#fire-key-press-event)
-- [Wait for expecation to pass](#wait-for-expecation-to-pass)
+- [Wait for expectation to pass](#wait-for-expectation-to-pass)
 
 ## Fetch elements by
 
