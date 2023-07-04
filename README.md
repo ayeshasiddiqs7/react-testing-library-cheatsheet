@@ -240,3 +240,24 @@ const wrapper = render(<DOMElement
     />);
 screen.debug();
 ```
+
+NOTE: Debug statements have a print limit of 7000 by default, you will see `...` in the console, when the DOM content is stripped off. To print more content when the DOM size is really large:
+
+In MAC/Linux:
+```html
+DEBUG_PRINT_LIMIT=10000 npm test
+```
+
+In Windows:
+
+Install cross-env 
+```html
+npm install --save-dev cross-env
+```
+
+Update the script for test to append 
+```html
+"scripts": {
+  "test": "cross-env DEBUG_PRINT_LIMIT=10000 react-scripts test"
+}
+```
