@@ -15,6 +15,7 @@ Following are few examples of methods supported by [React Testing Library(RTL)](
 - [Fire key press event](#fire-key-press-event)
 - [Wait for expectation to pass](#wait-for-expectation-to-pass)
 - [Using debug method](#using-debug-method)
+- [Debug Print Limit](#debug-print-limit)
 
 ## Fetch elements by
 
@@ -240,8 +241,8 @@ const wrapper = render(<DOMElement
     />);
 screen.debug();
 ```
-
-NOTE: Debug statements have a print limit of 7000 by default, you will see `...` in the console, when the DOM content is stripped off. To print more content when the DOM size is really large:
+### Debug Print Limit
+Debug statements have a print limit of 7000 by default, you will see `...` in the console, when the DOM content is stripped off. To print more content when the DOM size is really large:
 
 In MAC/Linux:
 ```html
